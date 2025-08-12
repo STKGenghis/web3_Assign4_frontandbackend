@@ -27,6 +27,18 @@ export const menuLinks: HeaderMenuLink[] = [
     icon: <HomeIcon className="h-4 w-4" />,
   },
   {
+    label: "Dashboard",
+    href: "/dashboard",
+  },
+  {
+    label: "Inventory",
+    href: "/inventory",
+  },
+  {
+    label: "Sales",
+    href: "/sales",
+  },
+  {
     label: "Debug Contracts",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,

@@ -16,53 +16,55 @@ const Home: NextPage = () => {
         <h1 className="text-center">
           <span className="block text-base mb-2">Welcome to</span>
           <span className="flex items-end gap-4 text-5xl font-bold">
-            <Logo size={48} /> Scaffold-Lisk{" "}
+            <Logo size={48} /> BaseFlow Inventory{" "}
           </span>
         </h1>
         <div className="flex btn btn-md bg-base-100 w-fit justify-center mb-4 items-center space-x-2">
           <p className="my-2 font-medium">Connected Address:</p>
           <Address address={connectedAddress} />
         </div>
-        <p className="text-center text-base text-slate-400">
-          Get started by editing{" "}
-          <code className="italic bg-base-100 text-white p-1 rounded-md text-base font-bold max-w-full break-words break-all inline-block">
-            packages/nextjs/app/page.tsx
-          </code>
+        <p className="text-center text-lg">
+          BaseFlow is a blockchain-based inventory management and invoicing system
         </p>
-        <p className="text-center text-base text-slate-400">
-          Edit your smart contract{" "}
-          <code className="italic bg-base-100 text-white p-1 rounded-md text-base font-bold max-w-full break-words break-all inline-block">
-            YourContract.sol
-          </code>{" "}
-          in{" "}
-          <code className="italic bg-base-100 text-white p-1 rounded-md text-base font-bold max-w-full break-words break-all inline-block">
-            packages/hardhat/contracts
-          </code>
+        <p className="text-center text-base mt-2">
+          Navigate through the menu to access:
         </p>
+        <div className="flex flex-wrap gap-4 justify-center mt-4">
+          <Link href="/dashboard" className="btn btn-primary">Dashboard</Link>
+          <Link href="/inventory" className="btn btn-secondary">Inventory</Link>
+          <Link href="/sales" className="btn btn-accent">Sales</Link>
+        </div>
       </div>
 
       <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
         <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
           <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
             <BugAntIcon className="h-8 w-8" />
-            <p>
-              Tinker with your smart contract using the{" "}
-              <Link href="/debug" passHref className="link">
-                Debug Contracts
-              </Link>{" "}
-              tab.
+            <h3 className="text-xl font-bold mt-4">Inventory Management</h3>
+            <p className="mt-2">
+              Track and manage your inventory items with real-time blockchain updates.
+              <br />
+              <Link href="/inventory" passHref className="link link-primary mt-2 inline-block">
+                Go to Inventory
+              </Link>
             </p>
           </div>
           <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
             <MagnifyingGlassIcon className="h-8 w-8" />
-            <p>
-              Explore your local transactions with the{" "}
-              <Link href="/blockexplorer" passHref className="link">
-                Block Explorer
-              </Link>{" "}
-              tab.
+            <h3 className="text-xl font-bold mt-4">Sales & Invoicing</h3>
+            <p className="mt-2">
+              Create and manage sales invoices with secure blockchain transactions.
+              <br />
+              <Link href="/sales" passHref className="link link-primary mt-2 inline-block">
+                Manage Sales
+              </Link>
             </p>
           </div>
+        </div>
+        <div className="flex justify-center mt-8">
+          <Link href="/debug" className="btn btn-outline">
+            Debug Contracts
+          </Link>
         </div>
       </div>
     </section>
