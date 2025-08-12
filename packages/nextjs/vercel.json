@@ -1,9 +1,5 @@
 {
-  "buildCommand": "cd ../.. && yarn workspaces focus --production --all && cd packages/nextjs && yarn build",
-  "outputDirectory": "packages/nextjs/.next",
   "framework": "nextjs",
-  "installCommand": "yarn install",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api" }
-  ]
+  "buildCommand": "cd packages/nextjs && yarn install && yarn build",
+  "outputDirectory": "packages/nextjs/.next"
 }

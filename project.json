@@ -1,0 +1,4 @@
+{
+  "projectType": "nextjs",
+  "root": "packages/nextjs"
+}
